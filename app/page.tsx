@@ -1,103 +1,192 @@
 import Image from "next/image";
 
+const techProfessionals = [
+  { name: "0x1eef", project: "llm.rb", contact: "0x1eef@proton.me" },
+  { name: "Aaron Allen", project: "-", contact: "https://aaronmallen.me" },
+  {
+    name: "Adrian McEwen",
+    project: "MCQN Ltd",
+    contact: "@amcewen@mastodon.me.uk",
+  },
+  {
+    name: "Alexander Gräfe",
+    project: "-",
+    contact: "@rickrickenharp.bsky.social",
+  },
+  {
+    name: "Andrew France",
+    project: "-",
+    contact: "@odaeus@social.vivaldi.net",
+  },
+  {
+    name: "Andrew Nesbitt",
+    project: "Ecosyste.ms",
+    contact: "andrew@ecosyste.ms",
+  },
+  {
+    name: "Andy Callaghan",
+    project: "-",
+    contact: "https://andycallaghan.com",
+  },
+  { name: "Ariane R.", project: "-", contact: "@ariaru" },
+  { name: "Astrid Gealer", project: "-", contact: "@astrid.place" },
+  {
+    name: "Cédric Delalande",
+    project: "Barley Serializer",
+    contact: "@MoskitoHero@ruby.social",
+  },
+  { name: "Corey Farwell", project: "-", contact: "rwell.org" },
+  { name: "Danielle Smith", project: "mittsu, kdl", contact: "@danini.dev" },
+  { name: "David Celis", project: "-", contact: "davidcel.is" },
+  { name: "Derek Houck", project: "-", contact: "derekhouck.com" },
+  {
+    name: "Dmitry L Rocha",
+    project: "-",
+    contact: "@yetanother.place/@dmitry",
+  },
+  { name: "Eric Schultz", project: "-", contact: "@wwahammy.com" },
+  { name: "Eugen Rochko", project: "-", contact: "@Gargron@mastodon.social" },
+  { name: "F", project: "-", contact: "@erbridge@sunspot.garden" },
+  { name: "Giles Bowkett", project: "-", contact: "@gilesb@gmail.com" },
+  { name: "fell sunderland", project: "-", contact: "hello@fellsunder.land" },
+  { name: "Harry Wood", project: "-", contact: "@en.osm.town/@harry_wood" },
+  {
+    name: "James Jefferies",
+    project: "-",
+    contact: "@jamesjefferies@mastodon.me.uk",
+  },
+  {
+    name: "James Smith",
+    project: "Manyfold",
+    contact: "@floppy@mastodon.me.uk",
+  },
+  { name: "Jamie Schembri", project: "-", contact: "@jamie.schembri.me" },
+  {
+    name: "Jared White",
+    project: "Fullstack Ruby",
+    contact: "@jaredwhite@indieweb.social",
+  },
+  { name: "Jason Garber", project: "", contact: "sixtwothree.org" },
+  { name: "Jay Caines-Gooby", project: "-", contact: "jay.gooby.org" },
+  { name: "Jesse Brooklyn Hannah", project: "-", contact: "jbhannah.net" },
+  { name: "Joe Sak", project: "-", contact: "@joesak.com" },
+  { name: "Jochen Lillich", project: "-", contact: "@monospace@floss.social" },
+  { name: "John-Paul Teti", project: "-", contact: "@jpteti@mastodon.social" },
+  { name: "John Small", project: "-", contact: "@jds340@gmail.com" },
+  { name: "Jon Wood", project: "-", contact: "@jon@blankpad.net" },
+  {
+    name: "Jonathon Anderson",
+    project: "-",
+    contact: "@anderson_jon@hachyderm.io",
+  },
+  {
+    name: "Dr Kim Foale",
+    project: "Geeks for Social Change",
+    contact: "kim@social.gfsc.studio",
+  },
+  { name: "Liam Arbuckle", project: "-", contact: "TheMrScrooby" },
+  {
+    name: "Lloyd Watkin",
+    project: "-",
+    contact: "https://www.evilprofessor.co.uk",
+  },
+  {
+    name: "Maarten Brouwers",
+    project: "-",
+    contact: "https://murb.nl/contact/",
+  },
+  {
+    name: "Manuel Bustillo",
+    project: "-",
+    contact: "https://blog.bustikiller.com/about/",
+  },
+  { name: "Matthew B", project: "-", contact: "https://famichiki.jp/@matthew" },
+  { name: "Nic Lake", project: "-", contact: "https://niclake.me" },
+  { name: "Pat Allan", project: "-", contact: "freelancing-gods.com" },
+  {
+    name: "Peter Boling",
+    project:
+      "ruby-oauth, ruby-openid, appraisal-rb, kettle-rb, galtzo-floss, RuboCop-LTS, floss-funding",
+    contact: "@galtzo@ruby.social",
+  },
+  { name: "Rasmus Grouleff", project: "-", contact: "@nerdd@mstdn.social" },
+  {
+    name: "Richard Degenne",
+    project: "-",
+    contact: "https://richarddegenne.fr",
+  },
+  {
+    name: "Rob Yurkowski",
+    project: "-",
+    contact: "@robyurkowski@oceanplayground.social",
+  },
+  { name: "Ryan Bigg", project: "-", contact: "https://ruby.social/@ryanbigg" },
+  { name: "Sam Pikesley", project: "-", contact: "sam.pikesley.org" },
+  {
+    name: "Shannon Skipper",
+    project: "-",
+    contact: "https://ruby.social/@havenwood",
+  },
+  {
+    name: "Thomas Fuchs",
+    project: "former Rails Core",
+    contact: "@thomasfuchs.at",
+  },
+  { name: "Tim Cowlishaw", project: "-", contact: "timcowlishaw.co.uk" },
+  { name: "Tom Marvolo Riddle", project: "-", contact: "@tom@cybre.space" },
+  { name: "Weldys Santos", project: "WS Tech", contact: "@weldyss@bolha.us" },
+  { name: "Wout Fierens", project: "-", contact: "@wout.codes" },
+  { name: "Vito Sartori", project: "-", contact: "vito.io" },
+];
+
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      <main className="flex flex-col items-center max-w-3xl mx-auto px-6 py-8">
+        <div className="mb-8">
+          <Image
+            src="/woke.png"
+            alt="Woke"
+            width={200}
+            height={200}
+            className="object-contain"
+          />
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="w-full">
+          <div className="grid grid-cols-3 gap-4 mb-4 pb-4 border-b-2 border-gray-300 font-bold text-lg">
+            <div>Name</div>
+            <div>Project/Affiliation</div>
+            <div>Contact</div>
+          </div>
+
+          <div className="space-y-2">
+            {techProfessionals.map((person, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-3 gap-4 py-3 border-b border-gray-200 hover:bg-gray-50"
+              >
+                <div className="font-medium">{person.name}</div>
+                <div className="text-gray-700">{person.project}</div>
+                <div className="text-blue-600 break-all">
+                  {person.contact.startsWith("http") ? (
+                    <a
+                      href={person.contact}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {person.contact}
+                    </a>
+                  ) : (
+                    person.contact
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

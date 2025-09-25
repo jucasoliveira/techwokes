@@ -182,9 +182,24 @@ export default function Home() {
     setShowForm(false);
   };
 
+  const goToExternalLink = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <main className="flex flex-col items-center max-w-3xl mx-auto px-6 py-8">
+        <div>Go woke, no work</div>
+        <div>
+          Made by{" "}
+          <a
+            href="https://twitter.com/lgrodev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @lgrodev
+          </a>
+        </div>
         <div className="mb-8">
           <Image
             src="/woke.png"
@@ -193,6 +208,19 @@ export default function Home() {
             height={200}
             className="object-contain"
           />
+        </div>
+        <div>
+          Some developers thought they would strike gold trying to remove DHH
+          from Rails. It backfired. So I made a list from their own repo
+        </div>
+        <div>
+          <Button
+            onClick={() =>
+              goToExternalLink("https://github.com/Plan-Vert/open-letter")
+            }
+          >
+            Open Letter
+          </Button>
         </div>
 
         <div className="w-full">

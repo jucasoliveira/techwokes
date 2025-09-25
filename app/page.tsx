@@ -196,6 +196,7 @@ export default function Home() {
             href="https://twitter.com/lgrodev"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-blue-600 cursor-pointer"
           >
             @lgrodev
           </a>
@@ -209,21 +210,27 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <div>
+        <div className="py-2">
           Some developers thought they would strike gold trying to remove DHH
-          from Rails. It backfired. So I made a list from their own repo
-        </div>
-        <div>
-          <Button
-            onClick={() =>
-              goToExternalLink("https://github.com/Plan-Vert/open-letter")
-            }
+          from Rails. It backfired. So I made a list from their own repo, read{" "}
+          <a
+            className="text-blue-600 cursor-pointer"
+            href="https://github.com/Plan-Vert/open-letter"
           >
-            Open Letter
-          </Button>
+            here
+          </a>
+        </div>
+        <div className="text-left self-start w-full py-4">
+          Someone is not on the list? Add them!{" "}
+          <a
+            className="text-blue-600 cursor-pointer"
+            href="https://github.com/jucasoliveira/techwokes"
+          >
+            Here
+          </a>
         </div>
 
-        <div className="w-full">
+        <div className="w-full py-4">
           <div className="grid grid-cols-3 gap-4 mb-4 pb-4 border-b-2 border-gray-300 font-bold text-lg">
             <div>Name</div>
             <div>Project/Affiliation</div>

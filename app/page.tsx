@@ -1,6 +1,11 @@
-import Image from "next/image";
+"use client";
 
-const techProfessionals = [
+import Image from "next/image";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+const initialTechProfessionals = [
   { name: "0x1eef", project: "llm.rb", contact: "0x1eef@proton.me" },
   { name: "Aaron Allen", project: "-", contact: "https://aaronmallen.me" },
   {
@@ -140,6 +145,43 @@ const techProfessionals = [
 ];
 
 export default function Home() {
+  const [techProfessionals, setTechProfessionals] = useState(
+    initialTechProfessionals
+  );
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    project: "",
+    contact: "",
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const handleAddEngineer = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.name.trim() && formData.contact.trim()) {
+      const newEngineer = {
+        name: formData.name.trim(),
+        project: formData.project.trim() || "-",
+        contact: formData.contact.trim(),
+      };
+
+      setTechProfessionals((prev) => [...prev, newEngineer]);
+      setFormData({ name: "", project: "", contact: "" });
+      setShowForm(false);
+    }
+  };
+
+  const handleCancelForm = () => {
+    setFormData({ name: "", project: "", contact: "" });
+    setShowForm(false);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <main className="flex flex-col items-center max-w-3xl mx-auto px-6 py-8">

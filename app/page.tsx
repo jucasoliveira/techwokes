@@ -79,9 +79,11 @@ export default function Home() {
 
         {/* GDPR Disclaimer */}
         <div className="mt-8 text-sm text-gray-500 text-center">
-          ⚠️ This repository republishes publicly available data for
-          informational purposes only. If you would like your name removed,
-          please{" "}
+          ⚠️ This repository republishes publicly available names from the open
+          letter for informational purposes only. No private contact information
+          is included. If you would like your name removed, please open an issue
+          in this repository. Requests will be honored promptly under GDPR
+          Article 17.
           <a
             href="https://github.com/jucasoliveira/techwokes/issues/new/choose"
             target="_blank"

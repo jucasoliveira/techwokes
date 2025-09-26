@@ -42,7 +42,7 @@ export default function Home() {
           Someone is not on the list? Add them!{" "}
           <a
             className="text-blue-600 cursor-pointer"
-            href="https://github.com/jucasoliveira/techwokes"
+            href="https://github.com/jucasoliveira/techwokes/blob/main/tech-professionals.md"
           >
             Here
           </a>

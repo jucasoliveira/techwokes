@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechWokes
+
+**Go woke, no work** - A list of tech professionals who signed an open letter to remove DHH from Rails.
+
+This project displays a list of developers who thought they would strike gold trying to remove DHH from Rails. It backfired. So we made a list from their own repo.
+
+## About
+
+This is a [Next.js](https://nextjs.org) project that displays a curated list of tech professionals. The data is loaded directly from a markdown file for easy maintenance.
+
+## Updating the List
+
+To add or modify entries in the list, edit the **`tech-professionals.md`** file in the root directory. The file contains a markdown table with the following structure:
+
+```markdown
+| Name     | Project    | Contact  |
+| -------- | ---------- | -------- |
+| John Doe | My Project | @johndoe |
+```
+
+Simply edit this file and the changes will be automatically reflected in the application.
 
 ## Getting Started
 
@@ -16,21 +36,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `tech-professionals.md` - The main data file containing the list of professionals
+- `app/page.tsx` - The main page component
+- `lib/tech-professionals.ts` - Utility functions for loading data from markdown
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+To add someone to the list:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Edit `tech-professionals.md`
+2. Add a new row to the table with Name, Project, and Contact information
+3. The changes will be automatically reflected in the application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Original Context
 
-## Deploy on Vercel
+This list was created from the [Plan-Vert/open-letter](https://github.com/Plan-Vert/open-letter) repository, which contained an open letter to remove DHH from Rails.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made by [@lgrodev](https://twitter.com/lgrodev)

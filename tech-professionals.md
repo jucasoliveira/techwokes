@@ -8,7 +8,6 @@
 | Alexander Gräfe       | -                                                                                          | @rickrickenharp.bsky.social          |
 | Andrew France         | -                                                                                          | @odaeus@social.vivaldi.net           |
 | Andrew Nesbitt        | Ecosyste.ms                                                                                | andrew@ecosyste.ms                   |
-| Andy Callaghan        | -                                                                                          | https://andycallaghan.com            |
 | Ariane R.             | -                                                                                          | @ariaru                              |
 | Astrid Gealer         | -                                                                                          | @astrid.place                        |
 | Corey Farwell         | -                                                                                          | rwell.org                            |

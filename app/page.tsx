@@ -28,24 +28,19 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <div className="py-2">
+        <div className="py-2 text-center">
           Some developers thought they would strike gold trying to remove DHH
-          from Rails. It backfired. So I made a list from their own repo, read{" "}
+          from Rails. This list republishes publicly available names from the
+          open letter{" "}
           <a
             className="text-blue-600 cursor-pointer"
             href="https://github.com/Plan-Vert/open-letter"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             here
           </a>
-        </div>
-        <div className="text-left self-start w-full py-4">
-          Someone is not on the list? Add them!{" "}
-          <a
-            className="text-blue-600 cursor-pointer"
-            href="https://github.com/jucasoliveira/techwokes/blob/main/tech-professionals.md"
-          >
-            Here
-          </a>
+          .
         </div>
 
         <div className="w-full py-4">
@@ -64,7 +59,7 @@ export default function Home() {
                 <div className="font-medium">{person.name}</div>
                 <div className="text-gray-700">{person.project}</div>
                 <div className="text-blue-600 break-all">
-                  {person.contact.startsWith("http") ? (
+                  {person.contact && person.contact.startsWith("http") ? (
                     <a
                       href={person.contact}
                       target="_blank"
@@ -74,12 +69,29 @@ export default function Home() {
                       {person.contact}
                     </a>
                   ) : (
-                    person.contact
+                    person.contact || "-"
                   )}
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* GDPR Disclaimer */}
+        <div className="mt-8 text-sm text-gray-500 text-center">
+          ⚠️ This repository republishes publicly available data for
+          informational purposes only. If you would like your name removed,
+          please{" "}
+          <a
+            href="https://github.com/jucasoliveira/techwokes/issues/new/choose"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            open an issue
+          </a>{" "}
+          in this repository. Requests will be honored promptly under GDPR
+          Article 17.
         </div>
       </main>
     </div>

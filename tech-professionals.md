@@ -11,7 +11,6 @@
 | Andy Callaghan        | -                                                                                          | https://andycallaghan.com            |
 | Ariane R.             | -                                                                                          | @ariaru                              |
 | Astrid Gealer         | -                                                                                          | @astrid.place                        |
-| Cédric Delalande      | Barley Serializer                                                                          | @MoskitoHero@ruby.social             |
 | Corey Farwell         | -                                                                                          | rwell.org                            |
 | Danielle Smith        | mittsu, kdl                                                                                | @danini.dev                          |
 | David Celis           | -                                                                                          | davidcel.is                          |

@@ -11,6 +11,7 @@
 | Ariane R.             | -                                                                                          | @ariaru                              |
 | Astrid Gealer         | -                                                                                          | @astrid.place                        |
 | Corey Farwell         | -                                                                                          | rwell.org                            |
+| Damien Mathieu        | Fascists, don't hire me please                                                             | N/A                                  |
 | Danielle Smith        | mittsu, kdl                                                                                | @danini.dev                          |
 | David Celis           | -                                                                                          | davidcel.is                          |
 | Derek Houck           | -                                                                                          | derekhouck.com                       |

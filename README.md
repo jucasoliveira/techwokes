@@ -1,6 +1,6 @@
 # TechWokes
 
-**Go woke, no work** - A list of tech professionals who signed an open letter to remove DHH from Rails.
+**Tech Wokes Directory** - A list of tech professionals who signed an open letter to remove DHH from Rails.
 
 This project displays a list of developers who thought they would strike gold trying to remove DHH from Rails. It backfired. So we made a list from their own repo.
 

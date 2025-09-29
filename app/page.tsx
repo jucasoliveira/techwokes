@@ -92,8 +92,7 @@ export default function Home() {
           >
             open an issue
           </a>{" "}
-          in this repository. Requests will be honored promptly under GDPR
-          Article 17.
+          in this repository.
         </div>
       </main>
     </div>

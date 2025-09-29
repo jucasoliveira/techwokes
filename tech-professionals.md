@@ -16,7 +16,6 @@
 | David Celis           | -                                                                                          | davidcel.is                          |
 | Derek Houck           | -                                                                                          | derekhouck.com                       |
 | Dmitry L Rocha        | -                                                                                          | @yetanother.place/@dmitry            |
-| Eric Schultz          | -                                                                                          | @wwahammy.com                        |
 | Eugen Rochko          | -                                                                                          | @Gargron@mastodon.social             |
 | F                     | -                                                                                          | @erbridge@sunspot.garden             |
 | Giles Bowkett         | -                                                                                          | @gilesb@gmail.com                    |

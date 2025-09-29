@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <main className="flex flex-col items-center max-w-3xl mx-auto px-6 py-8">
-        <div>Go woke, no work</div>
+        <div>Tech Wokes Directory</div>
         <div>
           Made by{" "}
           <a

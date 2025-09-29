@@ -28,6 +28,7 @@
 | Jared White           | Fullstack Ruby                                                                             | @jaredwhite@indieweb.social          |
 | Jason Garber          |                                                                                            | sixtwothree.org                      |
 | Jay Caines-Gooby      | -                                                                                          | jay.gooby.org                        |
+| Jean Boussier         | Rails core and Ruby core committer                                                         | @byroot.bsky.social                  |
 | Jesse Brooklyn Hannah | -                                                                                          | jbhannah.net                         |
 | Joe Sak               | -                                                                                          | @joesak.com                          |
 | Jochen Lillich        | -                                                                                          | @monospace@floss.social              |

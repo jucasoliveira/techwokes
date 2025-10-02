@@ -35,6 +35,7 @@
 | John Small            | -                                                                                          | @jds340@gmail.com                    |
 | Jon Wood              | -                                                                                          | @jon@blankpad.net                    |
 | Jonathon Anderson     | -                                                                                          | @anderson_jon@hachyderm.io           |
+| Karl Oscar Weber the First | Ruby Camping                                                                          | me@kow.fm                            |
 | Dr Kim Foale          | Geeks for Social Change                                                                    | kim@social.gfsc.studio               |
 | Liam Arbuckle         | -                                                                                          | TheMrScrooby                         |
 | Lloyd Watkin          | -                                                                                          | https://www.evilprofessor.co.uk      |
